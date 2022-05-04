@@ -1,16 +1,19 @@
 library(ggplot2)
-
 library(dplyr)
 setwd("C:/Users/HP/Desktop/R")
-SALES1<-read.csv("Sales dataset.CSV")
+#SALES1<-read.csv("Sales dataset.CSV")
+SALES1<-read.csv("https://drive.google.com/file/d/1cgW_G7Lb7puwX0NUwfEuuXQ504lhDXxu/view?usp=sharing")
 #This is a sales data recorded in Blaise bicycles company
 
 #To list the variables in mydata
 names(SALES1)
 
+#To removed unused columns
 SALES <- subset(SALES1, select = -c(Transaction_date, Gender, Age,Marital.status,Employment.status,Payment.method,Referal))
+
 #To list the updated dataset
 names(SALES)
+
 #To view the first10 dataset in SALES
 head(SALES, n=10)
 attach(SALES)
@@ -21,6 +24,8 @@ print(nrow(SALES))
 
 # To check null values
 summary(is.na(SALES))  
+
+#Summary statistics
 summary(SALES)
 
 #To get the total amount for sales
