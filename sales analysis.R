@@ -84,15 +84,3 @@ labs(title = "Total profit per brand", y = "Brands", x = "Profit(£)")+
 coord_flip()+
 geom_text(aes(label = x),hjust = 1.5,color = "white",size = 3) +
 theme_classic()
-
-
-
-
-
-
-
-
-
-
-
-
